@@ -21,7 +21,7 @@ body {
 
 .calculator {
     height: 100%;
-    min-height: 500px;
+    /* min-height: 500px; */
     width: 375px;
     background: #1A1A1A;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -69,6 +69,9 @@ body {
     padding: 20px 0;
     font-size: 22px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn.null {
@@ -81,6 +84,30 @@ body {
 
 .btn.orange {
     background: #dd7621;
+}
+
+@media (max-height:600px) {
+    .btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-height:460px) {
+    body {
+        min-height: 460px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .container {
+        position: static;
+    }
+
+    .calculator {
+        height: 100%;
+    }
 }
 
 @media (max-width:475px) {
